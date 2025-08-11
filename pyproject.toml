@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "treescaffold"
+version = "0.1.0"
+description = "Create folders/files from a tree-spec text file."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name="Serhii Berebko"}]
+keywords = ["scaffold", "cli", "tree", "filesystem"]
+dependencies = [
+  "typer>=0.12.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-github/treescaffold"
+Issues = "https://github.com/your-github/treescaffold/issues"
+
+[project.scripts]
+treescaffold = "treescaffold.cli:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]

@@ -1,0 +1,22 @@
+jarvis/
+├── apps/
+│   ├── api/
+│   │   ├── main.py
+│   │   └── routers/
+│   │       ├── health.py
+│   │       └── mcp_memory.py        # memory.write / memory.search
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── db.py
+│   │   ├── chunking.py
+│   │   └── embeddings.py            # OpenAI або локальна sentence-transformers
+│   └── models/
+│       └── memory.py
+├── scripts/
+│   └── import_chatkeeper_md.py
+├── infra/
+│   └── Dockerfile.api
+├── docker-compose.yml
+├── pyproject.toml
+├── .env.example
+└── Makefile
