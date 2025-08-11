@@ -1,16 +1,16 @@
 .PHONY: setup lint test build
 
 setup:
-\tpython -m venv .venv && . .venv/bin/activate && pip install -U pip
-\t. .venv/bin/activate && pip install -e .[dev]
-\tpre-commit install
+	python -m venv .venv && . .venv/bin/activate && pip install -U pip
+	. .venv/bin/activate && pip install -e .[dev]
+	pre-commit install
 
 lint:
-\truff check --fix
-\tblack src tests
+	ruff check --fix
+	black src tests
 
 test:
-\tpytest -q
+	pytest -q
 
 build:
-\tpython -m build
+	python -m build

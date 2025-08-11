@@ -16,8 +16,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-github/treescaffold"
-Issues = "https://github.com/your-github/treescaffold/issues"
+Homepage = "https://github.com/serbernar/treescaffold"
+Issues = "https://github.com/serbernar/treescaffold/issues"
 
 [project.scripts]
 treescaffold = "treescaffold.cli:app"

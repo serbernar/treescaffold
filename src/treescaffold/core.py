@@ -7,6 +7,7 @@ TREE_CHARS = str.maketrans({"│": " ", "├": " ", "└": " ", "─": " ", "┼
 
 Entry = Tuple[int, str, bool]  # depth, name, is_dir
 
+
 def parse_lines(spec: str) -> List[Entry]:
     """
     Parse 'tree' formatted text into (depth, name, is_dir).
@@ -31,6 +32,7 @@ def parse_lines(spec: str) -> List[Entry]:
         is_dir = name.endswith("/")
         out.append((depth, name.rstrip("/"), is_dir))
     return out
+
 
 def create_structure(
     entries: List[Entry],
